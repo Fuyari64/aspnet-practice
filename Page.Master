@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.Master.cs" Inherits="Projeto3._1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--Bibliotecas CSS e Javascript--%>
+    <link href="css/Projeto.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <%--bibliotecas para exibir slides--%>
+    <link href="js/flexslider.css" rel="stylesheet" />
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/flexslider.min.js"></script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="content-wrap">
+                <%--Cabeçalho--%>
+                <div class="cabecalho">
+                    <%--logomarca--%>
+                    <div class="logomarca">
+                        <asp:Image ID="Image1" ImageUrl="~/images/marca.png" runat="server" />
+                    </div>
+                    <%--barra titulo--%>
+                    <div class="barra-titulo">
+                        Segurança da Informação
+                    </div>
+                    <%--menu--%>
+                    <div class="barra-menu">
+                        <a href="default.aspx">Home</a>
+                        <a href="ExibirExcecoes.aspx">Exceções</a>
+                        <a href="FaleConosco.aspx">Fale Conosco</a>
+                        <a href="ExecutarPing.aspx">Ping</a>
+                        <a href="CadastroComputadores.aspx">Cadastro</a>
+                    </div>
+                </div>
+            </div>
+            <%--Conteudo--%>
+                <div class="conteudo content-wrap">
+                    <asp:ContentPlaceHolder ID="Content" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+            <%--Rodape--%>
+                <div class="rodape">
+
+                </div>
+
+        </div>
+    </form>
+</body>
+
+</html>
